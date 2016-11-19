@@ -33,8 +33,28 @@ function create(){
 	var ledge = platforms.create(-150, 250, 'ground');
 	ledge.body.immovable = true;
 
+	// Player
+	player = game.add.sprite(32,game.world.height - 150, 'dude');
+		// animate the sprite
+		player.animations.add('left',[0,1,2,3],10,true)
+		player.animations.add('right',[5,6,7,8],10,true)
+		game.physics.arcade.enable(player);
+		// physics properties
+		player.body.bounce.y = 0.2;
+		player.body.gravity.y = 300;
+		player.body.collideWorldBounds = true;
 }
 
+	// Baddie
+	enemy1 = game.add.sprite(750, 20, 'baddie');
+		// animate the sprite
+		enemy1.nimations.add('left',[0,1],10,true)
+		enemy1.animations.add('right',[2,3],10,true)
+		game.physics.arcade.enable(enemy1);
+		// physics properties
+		enemy1.body.bounce.y = 0.2;
+		enemy1.body.gravity.y = 500;
+		enemy1.body.collideWorldBounds = true;
 function update(){
 
 }
