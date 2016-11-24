@@ -48,7 +48,7 @@ function create(){
 	// Baddie
 	enemy1 = game.add.sprite(750, 20, 'baddie');
 		// animate the sprite
-		enemy1.nimations.add('left',[0,1],10,true)
+		enemy1.animations.add('left',[0,1],10,true)
 		enemy1.animations.add('right',[2,3],10,true)
 		game.physics.arcade.enable(enemy1);
 		// physics properties
@@ -58,6 +58,23 @@ function create(){
 function update(){
 
 }
+
+// Enemy sprite 
+enemy1 = game.add.sprite(750, 20, 'baddie');
+	// animate
+	enemy1.animations.add('left', [0,1,] 10, true)
+	enemy1.animations.add('right', [2,3,] 10, true)
+	// physics
+	game.physics.arcade.enable(enemy1);
+	enemy1.body.bounce.y = 0.2;
+	enemy1.body.gravity.y = 500;
+	enemy1.body.collideWorldBounds = true;
+
+// Keyboard inputs
+cursors = game.input.Keyboard.createCursorKeys();
+
+
+
 
 
 
