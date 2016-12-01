@@ -87,6 +87,8 @@ function update(){
 
 	// allow player sprite to jump
 	if (cursors.up.isDown && player.body.touching.down){
+				player.body.velocity.y = -350;
+
 
 	}
 		player.body.velocity.y = -350;
