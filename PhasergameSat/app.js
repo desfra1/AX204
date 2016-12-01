@@ -43,7 +43,7 @@ function create(){
 		player.body.bounce.y = 0.2;
 		player.body.gravity.y = 300;
 		player.body.collideWorldBounds = true;
-}
+
 
 	// Baddie
 	enemy1 = game.add.sprite(750, 20, 'baddie');
@@ -56,9 +56,10 @@ function create(){
 		enemy1.body.gravity.y = 500;
 		enemy1.body.collideWorldBounds = true;
 
+	// Keyboard inputs
+	cursors = game.input.Keyboard.createCursorKeys();
+}
 
-// Keyboard inputs
-cursors = game.input.Keyboard.createCursorKeys();
 
 function update(){
 
