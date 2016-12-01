@@ -33,6 +33,13 @@ function create(){
 	var ledge = platforms.create(-150, 250, 'ground');
 	ledge.body.immovable = true;
 
+	// Generate stars for the player to collect
+	// Start by creating a group called stars
+	stars = game.add.group();
+	// Adding physics to the group 
+	stars.enableBody = true;
+
+
 	// Player
 	player = game.add.sprite(32,game.world.height - 150, 'dude');
 		// animate the sprite
@@ -92,6 +99,13 @@ function update(){
 
 	}
 		
+	// Make baddie run
+	if (enemy1.x > 759) {
+		enemy1.body.velocity.x = -120;
+
+	} else if (enemy1.x <405) {
+		enemy1.body.velocity.x = 120;
+	}
 
 }
 
