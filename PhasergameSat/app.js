@@ -91,7 +91,7 @@ function update(){
 
 
 	}
-		player.body.velocity.y = -350;
+		
 
 }
 
