@@ -57,7 +57,7 @@ function create(){
 		enemy1.body.collideWorldBounds = true;
 
 	// Keyboard inputs
-	cursors = game.input.Keyboard.createCursorKeys();
+	cursors = game.input.keyboard.createCursorKeys();
 }
 
 
